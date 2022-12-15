@@ -8,6 +8,7 @@
   <head>
     <title>Tạo nhiệm vụ mới UWC 2.0</title>
     <link rel="icon" href="src/assets/icon.png">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js" defer></script>
     <script src = "employee.js"></script>
     <script src = "vehicle.js"></script>
@@ -15,6 +16,8 @@
     <script src = "mcp.js"></script>
     <script src = "auth.js"></script>
     <script type ="text/javascript">  
+    
+var parent_window = window.opener;
     const params = (new URL(location)).searchParams;
       while (loadDataFromFile() !=true) {};  
     </script>
