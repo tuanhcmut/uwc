@@ -1,0 +1,37 @@
+[
+{
+    "userid": "000001",
+    "password": "12345678",
+    "role" : "officer"
+},
+{
+    "userid": "000002",
+    "password": "12345678",
+    "role" : "employee"
+},
+{
+    "userid": "000003",
+    "password": "12345678",
+    "role" : "officer"
+},
+{
+    "userid": "000004",
+    "password": "12345678",
+    "role" : "employee"
+},
+{
+    "userid": "000005",
+    "password": "12345678",
+    "role" : "employee"
+},
+{
+    "userid": "000006",
+    "password": "12345678",
+    "role" : "employee"
+},
+{
+    "userid": "000007",
+    "password": "12345678",
+    "role" : "employee"
+}
+]
