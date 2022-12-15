@@ -14,12 +14,12 @@ function initMap() {
   // Create the markers.
   tourStops.forEach(({mcpId, percentage, position, title }, i) => {
     const pinView = new google.maps.marker.PinView({
-      glyph: `${i + 100}`,  background: (percentage < 30)?"green":(percentage<50)?"#FBBC04":"red", borderColor: "#137333",  glyphColor: "white"
+      glyph: `${mcpId}`,  background: (percentage < 30)?"green":(percentage<50)?"#FBBC04":"red", borderColor: "#137333",  glyphColor: "white"
     });
     const marker = new google.maps.marker.AdvancedMarkerView({
       position,
       map,
-      title: `${i + 200}. ${title}<br> <button class = 'navigate' onclick = "selectMCP('${mcpId}')">Select</button>`,
+      title: `${mcpId}. ${title}<br> <button class = 'navigate' onclick = "selectMCP('${mcpId}')">Select</button>`,
       content: pinView.element,
     });
 
