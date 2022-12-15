@@ -1,0 +1,60 @@
+[
+{
+    "userid": "000002",
+    "phone" : "0999999999",
+    "email" : "hao.le1110@hcmut.edu.vn",
+    "fullName": "Le Duy Hao",
+    "role" : "collector",
+    "group":"C21",
+    "vehicleId":"019",
+    "taskIds": ["1665849098","1665849120","1665849127","1665849134"],
+    "status": "working" 
+},
+{
+    "userid": "000004",
+    "phone" : "0444444444",
+    "email" : "son.phamv14ce@hcmut.edu.vn",
+    "password": "12345678",
+    "fullName": "Pham Quang Son",
+    "role" : "janitor",
+    "group":"J12",
+    "vehicleId":"929",
+    "taskIds": ["1665849181","1665849186","1665849196","1665849200"],
+    "status": "working"
+},
+{
+    "userid": "000005",
+    "phone" : "0555555555",
+    "email" : "vinh.dangvinhbebe@hcmut.edu.vn",
+    "password": "12345678",
+    "fullName": "Dang Van Vinh",
+    "role" : "janitor",
+    "group":"J12",
+    "vehicleId":"333",
+    "taskIds": ["1665849207","1665849210","1665849214","1665849220"],
+    "status": "working"
+},
+{
+    "userid": "000006",
+    "phone" : "0666666666",
+    "email" : "tuan.tranminh@hcmut.edu.vn",
+    "password": "12345678",
+    "fullName": "Tran Minh Tuan",
+    "role" : "collector",
+    "vehicleId":"123",
+    "taskIds": ["1665849222"],
+    "status": "unavailable" 
+},
+{
+    "userid": "000007",
+    "phone" : "0777777777",
+    "email" : "hung.mai2001@hcmut.edu.vn,",
+    "password": "12345678",
+    "fullName": "Mai Xuan Hung",
+    "role" : "collector",
+    "group":"C21",
+    "vehicleId":"321",
+    "taskIds": ["1665849243","1665849246","1665849250"],
+    "status": "available"
+}
+]

@@ -1,0 +1,261 @@
+[
+{
+    "taskId": "1665849181",
+    "role" : "janitor",
+    "employeeId": "000004",
+    "MCPs" : ["321"],
+    "description":"Nothing",
+    "timeCreated": 1665849181,
+    "vehicleId":"929",
+    "areaIds": ["51","50","52"],
+    "status": "done",
+    "progress":"100",
+    "timeStart": 1665851654, 
+    "timeDone": 1665894156
+},
+{
+    "taskId": "1665849186",
+    "role" : "janitor",
+    "employeeId": "000004",
+    "MCPs" : ["456"],
+    "description":"Clean it carefully",
+    "timeCreated": 1665849186,
+    "vehicleId":"929",
+    "areaIds": ["52"],
+    "status": "doing",
+    "progress":"50", 
+    "timeStart": 1665977771,
+    "timeDone": null
+},
+{
+    "taskId": "1665849196",
+    "role" : "janitor",
+    "employeeId": "000004",
+    "MCPs" : ["789"],
+    "description": null,
+    "timeCreated": 1665849196,
+    "vehicleId":"929",
+    "areaIds": ["50","51"],
+    "status": "scheduled",
+    "progress":"0",
+    "timeStart": 1666841771,
+    "timeDone": null
+},
+{
+    "taskId": "1665849200",
+    "role" : "janitor",
+    "employeeId": "000004",
+    "MCPs" : ["987"],
+    "description":"Clean it carefully",
+    "timeCreated": 1665849200,
+    "vehicleId":"929",
+    "areaIds": ["50"],
+    "status": "scheduled",
+    "progress":"0",
+    "timeStart": 1666888571,
+    "timeDone": null
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    "taskId": "1665849207",
+    "role" : "janitor",
+    "employeeId": "000005",
+    "MCPs" : ["123"],
+    "description":"As soon as possible",
+    "timeCreated": 1665849207,
+    "vehicleId":"333",
+    "areaIds": ["31","32"],
+    "status": "done",
+    "progress":"100",
+    "timeStart": 1665851654, 
+    "timeDone": 1665894156
+},
+{
+    "taskId": "1665849210",
+    "role" : "janitor",
+    "employeeId": "000005",
+    "MCPs" : ["123"],
+    "description":"Clean it carefully",
+    "timeCreated": 1665849210,
+    "vehicleId":"929",
+    "areaIds": ["31"],
+    "status": "doing",
+    "progress":"20", 
+    "timeStart": 1666456571,
+    "timeDone": null
+},
+{
+    "taskId": "1665849214",
+    "role" : "janitor",
+    "employeeId": "000005",
+    "MCPs" : ["123"],
+    "description": null,
+    "timeCreated": 1665849214,
+    "vehicleId":"929",
+    "areaIds": ["32","31"],
+    "status": "scheduled",
+    "progress":"0",
+    "timeStart": 1666542971,
+    "timeDone": null
+},
+{
+    "taskId": "1665849220",
+    "role" : "janitor",
+    "employeeId": "000005",
+    "MCPs" : ["123"],
+    "description":"Clean it carefully",
+    "timeCreated": 1665849220,
+    "vehicleId":"929",
+    "areaIds": ["32"],
+    "status": "scheduled",
+    "progress":"0",
+    "timeStart": 1666629371,
+    "timeDone": null
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    "taskId": "1665849098",
+    "role" : "collector",
+    "employeeId": "000002",
+    "MCPs" : ["321","456","789"],
+    "description":"You must be quickly",
+    "timeCreated": 1665849098,
+    "vehicleId":"019",
+    "routeId": "70",
+    "status": "done",
+    "progress":"100", 
+    "timeStart": 1665937198,
+    "timeDone": 1665937199
+},
+{
+    "taskId": "1665849120",
+    "role" : "collector",
+    "employeeId": "000002",
+    "MCPs" : ["012","210"],
+    "description":"No need to rush",
+    "timeCreated": 1665849120,
+    "vehicleId":"019",
+    "routeId": "60",
+    "status": "doing",
+    "progress":"45", 
+    "timeStart": 1665939203,
+    "timeDone": null
+},
+{
+    "taskId": "1665849127",
+    "role" : "collector",
+    "employeeId": "000002",
+    "MCPs" : ["321","123","444"],
+    "description":"ASAP",
+    "timeCreated": 1665849127,
+    "vehicleId":"019",
+    "routeId": "12",
+    "status": "scheduled",
+    "progress":"0", 
+    "timeStart": 1666456571,
+    "timeDone": null
+},
+{
+    "taskId": "1665849134",
+    "role" : "collector",
+    "employeeId": "000002",
+    "MCPs" : ["987","654","789"],
+    "description":"You must hurry up",
+    "timeCreated": 1665849134,
+    "vehicleId":"019",
+    "routeId": "44",
+    "status": "scheduled",
+    "progress":"0", 
+    "timeStart": 1666456571,
+    "timeDone": null
+},
+{
+    "taskId": "1665849222",
+    "role" : "collector",
+    "employeeId": "000006",
+    "MCPs" : ["888","555","999"],
+    "description":"First day you work, you need to go early at 5AM",
+    "timeCreated": 1665849222,
+    "vehicleId":"123",
+    "routeId": "88",
+    "status": "done",
+    "progress":"100", 
+    "timeStart": 1665937198,
+    "timeDone": 1665937199
+},
+{
+    "taskId": "1665849243",
+    "role" : "collector",
+    "employeeId": "000007",
+    "MCPs" : ["012","210"],
+    "description":"No need to rush",
+    "timeCreated": 1665849243,
+    "vehicleId":"321",
+    "routeId": "66",
+    "status": "done",
+    "progress":"100", 
+    "timeStart": 1665938139,
+    "timeDone": 1665938145
+},
+{
+    "taskId": "1665849246",
+    "role" : "collector",
+    "employeeId": "000007",
+    "MCPs" : ["012","210","444"],
+    "description":"ASAP",
+    "timeCreated": 1665849246,
+    "vehicleId":"321",
+    "routeId": "04",
+    "status": "scheduled",
+    "progress":"0", 
+    "timeStart": 1665938222,
+    "timeDone": null
+},
+{
+    "taskId": "1665849250",
+    "role" : "collector",
+    "employeeId": "000007",
+    "MCPs" : ["123","321","444","999"],
+    "description":"You must hurry up",
+    "timeCreated": 1665849250,
+    "vehicleId":"321",
+    "routeId": "22",
+    "status": "scheduled",
+    "progress":"0", 
+    "timeStart": 1665938225,
+    "timeDone": null
+}
+]

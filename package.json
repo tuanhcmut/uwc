@@ -1,0 +1,52 @@
+{
+  "name": "marker-modern",
+  "description": "Samples for Google Maps JavaScript",
+  "version": "2.1.4",
+  "keywords": [
+    "google",
+    "javascript",
+    "maps",
+    "samples"
+  ],
+  "homepage": "https://github.com/googlemaps/js-samples#readme",
+  "bugs": {
+    "url": "https://github.com/googlemaps/js-samples/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/googlemaps/js-samples.git"
+  },
+  "files": [],
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build --outDir dist --base './'",
+    "test": "tsc --no-emit",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/google.maps": "^3.50.4",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.7"
+  },
+  "private": true,
+  "main": "account.js",
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "esbuild": "^0.15.11",
+    "esbuild-windows-64": "^0.15.11",
+    "function-bind": "^1.1.1",
+    "has": "^1.0.3",
+    "is-core-module": "^2.10.0",
+    "nanoid": "^3.3.4",
+    "path-parse": "^1.0.7",
+    "picocolors": "^1.0.0",
+    "postcss": "^8.4.18",
+    "resolve": "^1.22.1",
+    "rollup": "^2.78.1",
+    "source-map-js": "^1.0.2",
+    "supports-preserve-symlinks-flag": "^1.0.0"
+  },
+  "author": ""
+}

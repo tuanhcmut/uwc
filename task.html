@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>Quản lí công việc UWC 2.0</title>
+    <link rel="icon" href="src/assets/icon.png">
+
+    <script src = "employee.js"></script>
+    <script src = "vehicle.js"></script>
+    <script src = "task.js"></script>
+    <script src = "mcp.js"></script>
+    <script src = "auth.js"></script>
+    <script type ="text/javascript">
+      while (loadDataFromFile() !=true) {};  
+    </script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="font-awesome\css\font-awesome.min.css">
+    <link rel="stylesheet" href="task_style.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div class="heading"><img class="logo" src="src/assets/logo.png" alt="" >
+      <h1>QUẢN LÍ CÔNG VIỆC</h1>
+      <button class="out-button" onclick="logOut();">
+        Đăng xuất<i class="fa fa-sign-out" aria-hidden="true"></i>
+      </button>
+    </div>
+    
+    <div class="add">
+      <button class="create-button" onclick="document.location.href='create.html'">
+       Create task<i class="fa fa-plus-circle" aria-hidden="true"></i>
+      </button>
+    </div>
+    
+    <table id="table_id" class="display">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Tên</th>
+          <th>ID Nhân viên</th>
+          <th>Vai trò</th>
+          <th>Nhóm</th>
+          <th>MCP</th>
+          <th>Phương tiện</th>
+          <th>Thời gian tạo</th>
+          <th>Trạng thái</th>
+          <th>Tiến độ (%)</th>
+          <th>Mô tả</th>
+          <th>Bắt đầu</th>
+          <th>Kết thúc</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    
+    <script type="text/javascript">
+      window.onload = function() { 
+        var table = $('#table_id').DataTable({
+          ajax: {
+            url: 'task.json',
+            dataSrc: ''
+          },
+          columnDefs:[
+          { 
+            targets:[7,11,12], 
+            render: function (data) { 
+            return data?new Date(data*1000).toLocaleString('en-GB'):null;
+            }
+          }
+        ],
+        columns: [
+        { data: "taskId"},
+        { 
+          data: "employeeId", 
+          render: function (data) {
+            return `<a onClick="getEmployeeById('${data}');">
+                    ${getEmployeeById(data).fullName}</a>`
+          }
+        },
+        { data: "employeeId"},
+        { 
+          data: "employeeId", 
+          render: function (data) {
+            return `<a onClick="getEmployeeById('${data}');">
+                    ${getEmployeeById(data).role}</a>`
+          }
+        },
+        { data: "employeeId", 
+          render: function (data) {
+            let group = getEmployeeById(data).group; 
+            return (group)?group:"None";
+          }
+        },
+        { data: "MCPs"},
+        { 
+          data: "vehicleId",
+          render: function (data) {
+            return `<a onClick="getVehicleById('${data}');">${data}</a>`
+          }
+        },
+        { data: "timeCreated" },
+        { data: "status"},
+        { data: "progress"},
+        { data: "description"},
+        { data: "timeStart"},
+        { data: "timeDone"},
+        {
+          targets: -1,
+          data: "taskId",
+          render: function (data) {
+            return `<button class='create-button' onclick = "recreate('${data}')"> Recreate </button>`
+          },
+          orderable:false
+        },
+        {
+          data: "status",
+          render: function (data) {
+            return (data == "done") ? ""
+            :"<button class='cancel-button'>Cancel</button>"
+          },
+          orderable:false
+        }
+      ]
+    } );
+        } ;
+  </script>      
+  </body>
+</html>

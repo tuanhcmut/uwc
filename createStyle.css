@@ -1,0 +1,143 @@
+body {
+  font-family: 'Montserrat';
+}
+h1 {
+  text-align: center;
+  grid-area: title;
+  margin: auto;
+  color: #03c04a;
+}
+.heading {
+  display: grid;
+  grid-template-areas: 'logo title button';
+}
+.out-button {
+  grid-area: button;
+  cursor: pointer;
+  background-color: #03c04a;
+  border-radius: 10px;
+  padding: 7px 15px;
+  border: 2px solid #03c04a;
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto; 
+  margin-right: 0;
+  align-items: center;
+}
+.out-button:hover {
+  background-color: white;
+  color: black;
+}
+.logo {
+  width: 100px;
+  height: 110px;
+  grid-area: logo;
+}
+.fa-arrow-circle-left {
+  padding-right: 6px;
+  padding-top: 2.25px;
+}
+.fa-arrow-circle-right, .fa-sign-out {
+  padding-left: 6px;
+  padding-top: 2.25px;
+}
+.navigate {
+  cursor: pointer;
+  background-color: #03c04a;
+  border-radius: 10px;
+  padding: 7px 15px;
+  border: 2px solid #03c04a;
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+}
+.navigate:hover {
+  background-color: white;
+  color: black;
+}
+.nav {
+  text-align: center;
+  margin-bottom: 10px;
+}
+label {
+  font-weight: 1000;
+}
+.assignment {
+  display: grid;
+  grid-template-columns: 40fr 60fr;;
+}
+.assign-form {
+  text-align: center;
+  margin-bottom: 10px;
+}
+/*.assign-plus {
+  grid-area: plus;
+} */
+#map {
+  width: 500px;
+  height: 500px;
+  margin-bottom: 10px;
+  margin: auto;
+}
+table {
+  border: 1px solid #03c04a;
+  border-radius: 5px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+th, td {
+  border: 1px solid #03c04a;
+  padding: 8px;
+}
+.cancel-button {
+  cursor: pointer;
+  background-color: #ff8787;
+  border-radius: 10px;
+  padding: 7px 15px;
+  border: 2px solid #ff8787;
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+}
+.cancel-button:hover {
+  background-color: red;
+}
+.dataTables_filter {
+  margin-bottom: 10px;
+  font-weight: 1000;
+}
+thead {
+  background-color: #03c04a;
+  color: white;
+}
+.select_all {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border-radius: 10px;
+  border: white;
+}
+.select_all:hover {
+  background-color: red;
+  color: white;
+}
+select {
+  border: 2px solid #03c04a;
+  border-radius: 10px;
+  font-family: 'Montserrat';
+  margin-bottom: 5px;
+  padding: 4px;
+}
+input {
+  border: 1px solid #03c04a;
+  padding: 4px;
+  font-family: 'Montserrat';
+  border-radius: 5px;
+}
+.vehicle-table {
+  max-width: 80%;
+  margin: auto;
+}

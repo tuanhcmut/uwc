@@ -1,0 +1,107 @@
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+ /* #map {
+  width:500px;height:500px;
+} */
+
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+ body {
+  margin: 0;
+  padding: 0;
+}
+.home-container {
+  display: grid;
+  grid-template-columns: 47fr 53fr;
+  height: 100vh;
+}
+.left {
+  display: flex;
+  background-color: #03c04a;
+}
+.left img {
+  margin-top: 40px;
+  width: 640px;
+  height: 427px;
+  background: transparent;
+}
+.right {
+  font-family: 'Montserrat';
+  display: flex;
+  flex-direction: column;
+}
+.right h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 50px;
+}
+.right h1 span {
+  color: #03c04a;
+}
+.right .box {
+  display: flex;
+  border-radius: 1em;
+  width: 30vw;
+  flex-direction: column;
+  padding: 2em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: relative;
+  margin: auto;
+  margin-top: 0px;
+}
+.right .box .log {
+  background-color: #03c04a;
+  padding: 1.4em;
+  color: #fff;
+  border-radius: 0.7em;
+  border: 1px solid #03c04a;
+  transition: 250ms;
+  cursor: pointer;
+  font-family: 'Montserrat';
+}
+.right .box .log:hover {
+  border: 1px solid #000;
+  background-color: transparent;
+  color: #000;
+}
+.right .box .in {
+  display: flex;
+  flex-direction: column;
+  margin: 0.8em 0;
+}
+.right .box .in div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.right .box .in label {
+  margin: 0.2em;
+}
+.right .box .in input {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  border: 1px solid #ebecf0;
+  border-radius: 0.7em;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 0px 0px 0px, rgba(60, 64, 67, 0.15) 0px 0px 3px 0px;
+  background-size: 50px;
+}
+.right .box .check_bar {
+  margin: 1em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.right .box .check_bar a:visited {
+  color: #000;
+}
+.right .box .check_bar div input[type=checkbox] {
+  margin: 0 1em;
+}
+
+[class$=api-load-alpha-banner] {
+  display: none;
+}

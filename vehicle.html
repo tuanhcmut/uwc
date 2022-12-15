@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>Tạo nhiệm vụ mới UWC 2.0</title>
+    <link rel="icon" href="src/assets/icon.png">
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js" defer></script>
+    <script src = "employee.js"></script>
+    <script src = "vehicle.js"></script>
+    <script src = "task.js"></script>
+    <script src = "mcp.js"></script>
+    <script src = "auth.js"></script>
+    <script type ="text/javascript">  
+    const params = (new URL(location)).searchParams;
+      while (loadDataFromFile() !=true) {};  
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="font-awesome\css\font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./createStyle.css" />
+    <script type="module" src="index.js"></script>
+  </head>
+  <body onload="generateSelectedEmployeeTable(params.get('employees').split('+'));">
+    <div class="heading"><img class="logo" src="src/assets/logo.png" alt="" onclick="location.href = 'task.html'">
+      <h1>CHECK PHƯƠNG TIỆN</h1>
+      <button class="out-button" onclick="logOut();">
+        Đăng xuất<i class="fa fa-sign-out" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="nav">
+      <button class="navigate" onclick="history.back()">
+        <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>Back
+      </button>
+      <button class="navigate" onclick = "goRouting();">
+        Next<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <form action="route.html" class="assign-form">
+      <table>
+        <tr>
+          <th><label for="role">Vai trò</label></th>
+          <td><span id="role"></span></td>
+        </tr>
+        <tr>
+          <th><label for="mcp">MCP đã chọn</label></th>
+          <td><span id="mcps"></span></td>
+        </tr>
+        <tr>
+          <th><label for="description">Mô tả</label></th>
+          <td><span id="description"></span></td>
+        </tr>
+        <tr>
+          <th><label for="timestart">Thời gian bắt đầu</label></th>
+          <td><span id="timestart"> </span></td>
+        </tr>
+        <tr>
+          <th><label for="employee">Nhân viên đã chọn</label></th>
+          <td><span id="employee"></span></td>
+        </tr>
+      </table>
+    </form>
+    <div id="table-div" class="vehicle-table"></div>
+       
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPEGZZxCgOpHZw_oqAz3U0UkCM94QOZvk&callback=initMap&libraries=marker&v=beta"
+      defer>
+    </script>
+    <script type="text/javascript" defer> 
+      document.getElementById("role").innerHTML = params.get("role")=='0'?"Collector":"Janitor";
+      document.getElementById("mcps").innerHTML = params.get("mcps").split("+");
+      document.getElementById("description").innerHTML = params.get("description");
+      document.getElementById("timestart").innerHTML = new Date (params.get("timestart")).toLocaleString();
+      document.getElementById("employee").innerHTML = params.get("employees").split("+");
+    </script>      
+  </body>
+</html>

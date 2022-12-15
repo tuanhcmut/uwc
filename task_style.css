@@ -1,0 +1,101 @@
+body {
+  font-family: 'Montserrat';
+}
+h1 {
+  text-align: center;
+  grid-area: title;
+  margin: auto;
+  color: #03c04a;
+}
+.heading {
+  display: grid;
+  grid-template-areas: 'logo title button';
+}
+.out-button {
+  grid-area: button;
+  cursor: pointer;
+  background-color: #03c04a;
+  border-radius: 10px;
+  padding: 7px 15px;
+  border: 2px solid #03c04a;
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto; 
+  margin-right: 0;
+  align-items: center;
+}
+.out-button:hover {
+  background-color: white;
+  color: black;
+}
+.fa {
+  padding-left: 8px;
+  padding-top: 2.25px;
+}
+.logo {
+  width: 100px;
+  height: 110px;
+  grid-area: logo;
+}
+.add {
+  text-align: center;
+}
+.create-button {
+  cursor: pointer;
+  background-color: #03c04a;
+  border-radius: 10px;
+  padding: 7px 15px;
+  border: 2px solid #03c04a;
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+}
+.create-button:hover{
+  background-color: white;
+  color: black;
+}
+.display {
+  margin-top: 100px;
+  border: 1px solid #03c04a;
+  border-radius: 10px;
+}
+th {
+  background-color: #03c04a;
+  color: white;
+}
+.cancel-button {
+  cursor: pointer;
+  background-color: #ff8787;
+  border-radius: 10px;
+  padding: 7px 15px;
+  border: 2px solid #ff8787;
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+}
+.cancel-button:hover {
+  background-color: red;
+}
+.dataTables_filter {
+  margin-bottom: 10px;
+  font-weight: 1000;
+}
+/* .paginate_button {
+  background-color: white !important;
+  border: 1px solid #03c04a !important;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.disabled {
+  cursor: pointer;
+}
+.current {
+  background-color: #03c04a !important;
+}
+.paginate_button.disabled:hover {
+  background-color: #03c04a !important;
+  color: white !important;
+} */
