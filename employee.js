@@ -72,7 +72,7 @@ document.getElementById("table-div").innerHTML= `
             <th>ID Phương tiện</th>
             <th>SĐT</th>
             <th>
-              <button class="select_all" onclick='alert("not implement yet")'>
+              <button class="select_all" onclick='alert("Không thể chọn tất cả vì các vai trò janitor hoặc collector không đồng nhất")'>
                 Chọn tất cả
               </button>
             </th>
@@ -102,7 +102,7 @@ var table = $('#table_id').DataTable( {
       }
     },
     { data: "vehicleId"},
-    { data: "phone" },
+    { data: "phone"},
     { data:"userid", 
       render: function (data){
         return `<button class="navigate" onclick="selectEmployee('${data}')">
@@ -128,7 +128,7 @@ function generateSelectedEmployeeTable(arr){
                 <th></th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id ="tbody_id">
         </tbody>
     </table>
     `
@@ -163,4 +163,14 @@ function generateSelectedEmployeeTable(arr){
         }
       ]
     } );
+}
+function handle(i,d){
+  $('#table_id').DataTable().rows().every(function(rowIdx, tableLoop, rowLoop) {
+    // The checks the id of the current row
+    if (this.data()["userid"] == i) {
+     let row = document.getElementById("tbody_id").getElementsByTagName("tr")[rowIdx]
+      row.getElementsByTagName("td")[3].innerHTML=vehicles.get(d).name  
+      row.getElementsByTagName("td")[4].innerHTML=d
+    }
+  })
 }

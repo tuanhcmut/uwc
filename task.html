@@ -7,7 +7,6 @@
 <html>
   <head>
     <title>Quản lí công việc UWC 2.0</title>
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="icon" href="src/assets/icon.png">
 
     <script src = "employee.js"></script>
@@ -128,14 +127,20 @@
         {
           data: "status",
           render: function (data) {
-            return (data == "done") ? ""
-            :"<button class='cancel-button'>Cancel</button>"
+            return (data == "done" || data=="canceled") ? ""
+            :`<button class='cancel-button' onclick = "cancel(this)">Cancel</button>`
           },
           orderable:false
         }
       ]
     } );
         } ;
+        function cancel(t){
+          $('#table_id').DataTable().row($(t).parents('tr')).data().status="canceled"
+          $('#table_id').DataTable().row($(t).parents('tr')).data().timeDone=new Date()/1000
+         $('#table_id').DataTable().row($(t).parents('tr')).data($('#table_id').DataTable().row($(t).parents('tr')).data())
+         t.style.display='none'
+        }
   </script>      
   </body>
 </html>

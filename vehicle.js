@@ -84,7 +84,7 @@ function generateVehicles(uid){
             data:"vehicleId",
             render: function (data){
               //return `<img src="${data} "alt="Snow">`
-              return `<button class="navigate" ${!vehicles.get(data).employeeId?"":'style="background-color:purple"'} onclick = "window.close()">${!vehicles.get(data).employeeId?"Assign":'Retake'}</button>`
+              return `<button class="navigate" ${!vehicles.get(data).employeeId?"":'style="background-color:purple"'} onclick = "updateData('${uid}','${data}')">${!vehicles.get(data).employeeId?"Assign":'Retake'}</button>`
             }, 
             orderable:false
         },
@@ -98,4 +98,11 @@ function generateVehicles(uid){
         }
       ]
     } );
+}
+function updateData(i,d){
+  if (vehicles.get(d).role!=employees.get(i).role)
+  return window.alert("Vai trò collector hoặc janitor không tương thích giữa phương tiện và nhân viên")
+  window.opener.handle(i,d);
+  window.opener.alert("Đã gán vehicle "+d+" cho employee "+i)
+  window.close()
 }
