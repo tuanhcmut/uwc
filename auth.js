@@ -1,5 +1,5 @@
 if (sessionStorage.getItem("userid")) 
-     return window.location.replace("task.html");
+     window.location.replace("task.html");
 function matchPassword(account) {
     return (account.userid === "000001" && account.password === "12345678");
 }
