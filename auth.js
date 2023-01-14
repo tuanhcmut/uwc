@@ -1,9 +1,10 @@
+if (sessionStorage.getItem("userid")) 
+     return window.location.replace("task.html");
 function matchPassword(account) {
     return (account.userid === "000001" && account.password === "12345678");
 }
+
 function login(username, password){
-    if (sessionStorage.getItem("userid")) 
-        return alert("Log out first!");
     fetch('./account.json')
     .then((response) => response.json())
     .then((json) => {
