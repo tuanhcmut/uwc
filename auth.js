@@ -1,5 +1,7 @@
-if (window.location.pathname == "/uwc/" || window.location.pathname.includes("index")) 
+if (window.location.pathname == "/uwc/" || window.location.pathname.includes("index")){ 
         if (sessionStorage.getItem("userid")) window.location.replace("task.html");
+}
+else if (!sessionStorage.getItem("userid")) window.location.replace("index.html");
 function matchPassword(account) {
     return (account.userid === "000001" && account.password === "12345678");
 }
